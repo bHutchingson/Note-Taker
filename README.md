@@ -9,6 +9,12 @@
   - [Tests](#tests)
   - [Dependencies](#dependencies)
   - [Contributing](#contributing)
+
+  ## Screenshots
+
+  ![ScreenshotOne](/assets/screenshot1.png)
+
+  ![ScreenshotTwo](/assets/screenshot2.png)
   
 
     ## Licenses
