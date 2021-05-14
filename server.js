@@ -8,8 +8,10 @@ const PORT = process.env.PORT || 3000;
 //data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static('public'));
 
-require('')
+
+require('./routes/noteRoutes')(app);
 
 //starts server
 app.listen(PORT, () => {
