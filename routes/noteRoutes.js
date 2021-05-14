@@ -42,5 +42,17 @@ router.post("/api/notes", (req, res) => {
 })
 
 //delete a note from db
+router.delete("/api/notes/:id", (req, res) => {
+    const id = req.params.id;
+    for (let i = 0; i < db.length; i++) {
+        if (db[i].id === id) {
+            db.splice(i, 1);
+        }
+    }
+    fs.writeFile('./db/db.json', JSON.stringify(db), err => {
+        err ? console.log(err) : console.log(`Successfully deleted ${id} from db.json`);
+    });
+    res.send("Successfully written to db");
+});
 
 module.exports = router;
